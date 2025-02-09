@@ -41,13 +41,15 @@ class CalculatorService with ChangeNotifier {
   void _calculateResult() {
     try {
       double result = _evaluateExpression(_input);
-      _output = result.toString();
+      _output = (result % 1 == 0) ? result.toInt().toString() : result.toString();
       _input = _output; // Permite continuar con más operaciones
     } catch (e) {
       _output = "Error";
     }
     notifyListeners();
   }
+
+
 
   double _evaluateExpression(String expression) {
     List<String> tokens = _tokenize(expression);

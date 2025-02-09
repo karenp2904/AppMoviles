@@ -1,6 +1,4 @@
-import 'package:calculator/Display.dart';
 import 'package:calculator/Frame.dart';
-import 'package:calculator/Keyboard.dart';
 import 'package:flutter/material.dart';
 
 class Calculator extends StatelessWidget {
