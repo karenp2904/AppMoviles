@@ -27,14 +27,14 @@ class Frame extends StatelessWidget {
         child: Column(
         children: [
           Expanded(
-            flex: 1, // Da más espacio al Display
+            flex: 1, // espacio 
             child: Container(
               child: const Display(),
             ),
           ),
           const SizedBox(height: 8),
           const Expanded(
-            flex: 3, // Da más espacio al Keyboard
+            flex: 3,
             child: Keyboard(),
           ),
         ],

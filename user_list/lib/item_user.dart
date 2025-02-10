@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:path/path.dart' as path;
 
 class ItemUsuario extends StatelessWidget {
-  final Map<String, dynamic> usuario;
+  final String sImagen;
+  final String sNombres;
+  final String sCarrera;
+  final double sPromedio;
 
-  const ItemUsuario({Key? key, required this.usuario}) : super(key: key);
+  const ItemUsuario({
+    super.key,
+    required this.sImagen,
+    required this.sNombres,
+    required this.sCarrera,
+    required this.sPromedio,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Row(
           children: [
             DecoratedBox(
@@ -19,34 +29,34 @@ class ItemUsuario extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Padding(
-                padding: EdgeInsets.all(5), // Espaciado interno 
+                padding: const EdgeInsets.all(5), // Espaciado interno 
                 child: CircleAvatar(
                   radius: 30,
-                  backgroundImage: AssetImage(usuario["imagen"]),
+                  backgroundImage: AssetImage(path.join('assets', sImagen)),
                 ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(10), 
+                padding: const EdgeInsets.all(10), 
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      usuario["nombres"],
-                      style: TextStyle(
+                      sNombres,
+                      style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.black87),
                     ),
                     Text(
-                      usuario["carrera"],
-                      style: TextStyle(fontSize: 16, color: Colors.black54),
+                      sCarrera,
+                      style: const TextStyle(fontSize: 16, color: Colors.black54),
                     ),
                     Text(
-                      "Promedio: ${usuario["promedio"]}",
-                      style: TextStyle(fontSize: 14, color: Colors.black87),
+                      "Promedio: $sPromedio",
+                      style: const TextStyle(fontSize: 14, color: Colors.black87),
                     ),
                   ],
                 ),

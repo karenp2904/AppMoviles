@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:user_list/list.dart';
 import 'package:user_list/list_view.dart'; 
 
 void main() {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ListaUsuarios(), 
+      home: ListaExterna(), 
     );
   }
 }

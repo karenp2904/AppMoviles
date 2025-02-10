@@ -64,11 +64,16 @@ class ListaUsuarios extends StatelessWidget {
         backgroundColor: Colors.blueGrey,
       ),
       body: ListView.builder(
-        itemCount: usuarios.length,
-        itemBuilder: (context, index) {
-          return ItemUsuario(usuario: usuarios[index]);
-        },
-      ),
+          itemCount: usuarios.length,
+          itemBuilder: (context, index) {
+            return ItemUsuario(
+              sImagen: usuarios[index]["imagen"],
+              sNombres: usuarios[index]["nombre"],
+              sCarrera: usuarios[index]["carrera"],
+              sPromedio: usuarios[index]["promedio"].toDouble(),
+            );
+          },
+        ),
     );
   }
 }
