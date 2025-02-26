@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets/home_screen.dart';
 import 'package:widgets/info_card.dart';
 import 'package:widgets/listView.dart';
+import 'package:widgets/moreWidgets.dart';
 import 'package:widgets/search_screen.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
@@ -15,7 +16,9 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   final List<Widget> _screens = [
     HomeScreen(),
     SearchScreen(),
-    InfoCard(title: 'title', description: 'description')   
+    WidgetsDemoScreen()
+
+   // InfoCard(title: 'title', description: 'description')   
   ];
 
   void _onItemTapped(int index) {

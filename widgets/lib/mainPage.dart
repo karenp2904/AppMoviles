@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/info_card.dart';
+import 'package:widgets/moreWidgets.dart';
 import 'package:widgets/nav_bar.dart';
 
 class MyMain extends StatelessWidget {
@@ -15,11 +16,12 @@ class MyMain extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min, 
           children: [
+            /*
             InfoCard(
               title: 'Título de la Tarjeta',
               description: 'Este es un ejemplo de una tarjeta con información.',
               icon: Icons.info,
-            ),
+            ),*/
           ]
           
       )
