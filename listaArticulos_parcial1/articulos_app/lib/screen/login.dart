@@ -11,7 +11,6 @@ class LoginScreen extends StatelessWidget {
     final authProvider = Provider.of<AuthProvider>(context);
 
       return Scaffold(
-        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(

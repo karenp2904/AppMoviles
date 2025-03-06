@@ -16,13 +16,13 @@ class SharedPrefs {
     await prefs.remove('token');
   }
 
-  static Future<String?> getUserId() async {
+  static Future<int?> getUserId() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getString('id');
+    return prefs.getInt('id');
   }
 
-  static Future<void> saveUserId(String userId) async {
+  static Future<void> saveUserId(int userId) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('id', userId);
+    await prefs.setInt('id', userId);
   }
 }
